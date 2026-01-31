@@ -320,11 +320,13 @@ document.addEventListener('keydown', event => {
                 changeSafe(() => {
                     if (chat.classList.contains(CHAT_MINIMIZED_C)) {
                         chat.classList.remove([CHAT_MINIMIZED_C]);
-                        document.getElementsByClassName('marquee-animation')[0]?.classList?.remove([DISPLAY_NONE_C]);
+                        // document.getElementsByClassName('marquee-animation')[0]?.classList?.remove([DISPLAY_NONE_C]);
+                        chat.querySelector('section > div > div.tw-transition')?.classList?.remove([DISPLAY_NONE_C]);
                         document.getElementsByClassName('community-highlight')[0]?.classList?.remove([DISPLAY_NONE_C]);
                     } else {
                         chat.classList.add([CHAT_MINIMIZED_C]);
-                        document.getElementsByClassName('marquee-animation')[0]?.classList?.add([DISPLAY_NONE_C]);
+                        // document.getElementsByClassName('marquee-animation')[0]?.classList?.add([DISPLAY_NONE_C]);
+                        chat.querySelector('section > div > div.tw-transition')?.classList?.add([DISPLAY_NONE_C]);
                         document.getElementsByClassName('community-highlight')[0]?.classList?.add([DISPLAY_NONE_C]);
                     }
                 });
